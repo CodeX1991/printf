@@ -101,7 +101,7 @@ int _print_spec(char format, va_list args)
 		{"c", print_a_char},
 		{"i", print_an_integer},
 		{"d", print_an_integer},
-		/*{"b", print_int_binary},*/
+		{"b", _print_int_binary},
 		{"s", print_a_string},
 		{"u", unsigned_integer},
 		{NULL, NULL}
