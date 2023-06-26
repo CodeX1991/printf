@@ -31,5 +31,7 @@ int print_a_string(va_list args);
 int print_int_binary(va_list args);
 int _printf(const char *format, ...);
 void _recursion_integer(int num);
+int print_unsigned_integer(unsigned int n);
+int unsigned_integer(va_list args);
 
 #endif /* MAIN_H isdef */

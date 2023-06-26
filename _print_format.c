@@ -50,7 +50,7 @@ int _print_format(const char *format, va_list args)
 int _validate_format(char format_type)
 {
 	int i = 0;
-	char spec_type[] = {'c', 'i', 'd', 'b', '%', 's'};
+	char spec_type[] = {'c', 'i', 'd', 'b', '%', 's', 'u'};
 
 	while (spec_type[i])
 	{
@@ -101,8 +101,9 @@ int _print_spec(char format, va_list args)
 		{"c", print_a_char},
 		{"i", print_an_integer},
 		{"d", print_an_integer},
-		{"b", print_int_binary},
+		/*{"b", print_int_binary},*/
 		{"s", print_a_string},
+		{"u", unsigned_integer},
 		{NULL, NULL}
 	};
 
