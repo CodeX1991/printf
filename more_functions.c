@@ -53,19 +53,16 @@ int print_unsigned_integer(unsigned int n)
  */
 int _print_int_binary(va_list args)
 {
-	unsigned int n = 0;
-	int num_digit = 0, num = 0;
+	unsigned int n = 0, num;
+	int num_digit = 0;
 
-	num = va_arg(args, int);
+	num = va_arg(args, unsigned int);
 	n = num;
-	if (num < 0)
-	{
-		_putchar('1');
-		num = num * -1;
-		n = num;
-		num_digit++;
-	}
-	while (n > 0)
+
+	if (num == 0)
+		return (_putchar('0'));
+
+	while (n > 1)
 	{
 		n = n / 2;
 		num_digit++;
@@ -78,7 +75,7 @@ int _print_int_binary(va_list args)
  * _recursion_int_binary - Prints a binary
  * @a:integer to print
  */
-void _recursion_int_binary(int a)
+void _recursion_int_binary(unsigned int a)
 {
 	unsigned int t;
 

@@ -33,6 +33,6 @@ int _printf(const char *format, ...);
 void _recursion_integer(int num);
 int print_unsigned_integer(unsigned int n);
 int unsigned_integer(va_list args);
-void _recursion_int_binary(int a);
+void _recursion_int_binary(unsigned int a);
 
 #endif /* MAIN_H isdef */
