@@ -61,8 +61,10 @@ int _print_int_binary(va_list args)
 
 	if (num == 0)
 		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
 
-	while (n > 1)
+	while (n > 0)
 	{
 		n = n / 2;
 		num_digit++;
