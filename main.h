@@ -42,5 +42,7 @@ int print_int_heX(va_list args);
 void _recursion_int_heX(unsigned int a, unsigned int base);
 int base_len(unsigned int num, int base);
 int print_a_stringS(va_list args);
+int print_an_address(va_list args);
+int print_hex(unsigned long int num);
 
 #endif /* MAIN_H isdef */

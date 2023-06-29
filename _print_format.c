@@ -50,7 +50,8 @@ int _print_format(const char *format, va_list args)
 int _validate_format(char format_type)
 {
 	int i = 0;
-	char spec_type[] = {'c', 'i', 'd', 'b', '%', 's', 'u', 'x', 'X', 'o', 'S'};
+	char spec_type[] = {'c', 'i', 'd', 'b', '%', 's', 'u', 'x', 'X', 'o',
+		'S', 'p'};
 
 	while (spec_type[i])
 	{
@@ -108,6 +109,7 @@ int _print_spec(char format, va_list args)
 		{"X", print_int_heX},
 		{"o", print_int_octal},
 		{"S", print_a_stringS},
+		{"p", print_an_address},
 		{NULL, NULL}
 	};
 
