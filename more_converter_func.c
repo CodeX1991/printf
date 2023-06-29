@@ -61,7 +61,7 @@ int print_an_address(va_list args)
 
 	p = va_arg(args, void*);
 
-	if (str == NULL)
+	if (p == NULL)
 	{
 		while (str[i])
 		{
