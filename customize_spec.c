@@ -20,7 +20,7 @@ int print_a_stringS(va_list args)
 			{
 				_putchar('\\');
 				_putchar('x');
-				if (str[i] == 10)
+				if (str[i] == 10 || (str[i] >= 1 && str[i] <= 9))
 					_putchar('0');
 				_recursion_int_heX(str[i], 16);
 				j += 3;
