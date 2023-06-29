@@ -44,5 +44,7 @@ int base_len(unsigned int num, int base);
 int print_a_stringS(va_list args);
 int print_an_address(va_list args);
 int print_hex(unsigned long int num);
+int print_reverse(va_list args);
+void _print_rev_recursion(char *s);
 
 #endif /* MAIN_H isdef */

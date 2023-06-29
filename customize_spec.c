@@ -40,3 +40,47 @@ int print_a_stringS(va_list args)
 
 	return (6);
 }
+
+/**
+ * print_reverse - prints a string in reverse
+ * @args: list of variadic argument
+ *
+ * Return: the number of character printed in reverse
+ */
+
+int print_reverse(va_list args)
+{
+	int counter = 0, i = 0;
+	char *s = va_arg(args, char *);
+	char *str = "(nil)";
+
+	if (s == NULL)
+	{
+		while (str)
+			_putchar(*str);
+	}
+
+	while (s[i] != 0)
+	{
+		counter++;
+		i++;
+	}
+	_print_rev_recursion(s);
+
+	return (counter);
+}
+
+/**
+ * _print_rev_recursion - prints a string in reverse
+ * @s: pointer the giving string
+ */
+
+void _print_rev_recursion(char *s)
+{
+	if (*s == 0)
+	{
+		return;
+	}
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
+}
