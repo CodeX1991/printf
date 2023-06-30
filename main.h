@@ -46,5 +46,6 @@ int print_an_address(va_list args);
 int print_hex(unsigned long int num);
 int print_reverse(va_list args);
 void _print_rev_recursion(char *s);
+int print_rot13(va_list args);
 
 #endif /* MAIN_H isdef */

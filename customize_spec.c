@@ -84,3 +84,38 @@ void _print_rev_recursion(char *s)
 	_print_rev_recursion(s + 1);
 	_putchar(*s);
 }
+
+/**
+ * print_rot13 - print the encoded string
+ * @args: list of variadic argument
+ *
+ * Return: the count of the string
+ */
+
+int print_rot13(va_list args)
+{
+	int len, i;
+	char *str;
+	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	str = va_arg(args, char *);
+
+	if (str == NULL)
+		return (-1);
+
+	for (len = 0; str[len]; len++)
+	{
+		for (i = 0; i <= 52; i++)
+		{
+			if (str[len] == input[i])
+			{
+				_putchar(output[i]);
+				break;
+			}
+		}
+		if (i == 53)
+			_putchar(str[len]);
+	}
+	return (len);
+}
